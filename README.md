@@ -61,6 +61,8 @@ CS423_project/
 └── train_model.py
 ```
 
+The repository is submitted together with the already trained model files in `models/`, so the project can be run directly without waiting for a new training process.
+
 ## Main Files
 
 ### `emotion_gui.py`
@@ -221,7 +223,7 @@ The README commands below assume the environment is activated and `python` refer
 
 ## Quick Start
 
-If the models are already present in `models/`, the fastest way to demo the project is:
+The trained models are already included in the repository. The fastest way to demo the project is:
 
 ```bash
 python emotion_gui.py
@@ -251,9 +253,9 @@ What it does:
 
 Notes:
 
-- If the selected model file does not exist, the GUI will show an error.
-- For `Custom CNN`, train the model first if `models/emotion_custom_cnn.keras` is missing.
-- For `MobileNetV2`, train the model first if `models/emotion_mobilenetv2.keras` is missing.
+- In this submitted version of the project, both trained model files are already included.
+- If a model file is deleted or missing for any reason, the GUI will show an error.
+- In that case, the corresponding training script can be run again to recreate it.
 
 ### 2. Train the Custom CNN
 
@@ -440,18 +442,20 @@ These visual filters are applied to the displayed webcam frame:
 
 ## Saved Models
 
-Training produces the following files:
+The repository already includes the following trained model files:
 
 - `models/emotion_custom_cnn.keras`
 - `models/emotion_mobilenetv2.keras`
 
-These files are intentionally not committed in Git by default because model binaries are large and are listed in `.gitignore`.
+They are kept in the repository so the project can be tested immediately without spending extra time on training.
 
-That means after a fresh clone:
+This means a reviewer can:
 
-- the code may be present
-- the dataset may need to be added manually
-- the models may need to be retrained
+- clone or download the project
+- install the dependencies
+- run the GUI or real-time scripts directly
+
+The RAF-DB dataset is still needed if the models are going to be trained again from scratch.
 
 ## Current Local Custom CNN Result
 
@@ -488,11 +492,12 @@ If a teaching assistant or reviewer wants to understand the project quickly, thi
 
 Reason:
 
-- the corresponding `.keras` file is missing from `models/`
+- the corresponding `.keras` file was deleted, moved, or not included in the local copy
 
 Fix:
 
-- run `python train_custom_cnn.py` for the custom model
+- check that the `models/` folder still contains the trained files
+- if needed, run `python train_custom_cnn.py` for the custom model
 - run `python train_model.py` for the MobileNetV2 model
 
 ### `Train directory not found` or `Test directory not found`
