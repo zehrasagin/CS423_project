@@ -16,7 +16,5 @@ env/
 .ipynb_checkpoints/
 
 # Local training outputs
-models/*.keras
-models/*.h5
 logs/
 checkpoints/
