@@ -542,17 +542,10 @@ Fix:
 - use a Python version compatible with TensorFlow 2.15
 - if needed, adapt the TensorFlow package selection for your OS
 
-## Notes for Report Submission
+## For the Report
 
-This README is intended to complement the written report by making the codebase easy to navigate and reproduce. A reviewer should be able to:
+This repository is meant to be read together with the report. It includes the full workflow in runnable form, from dataset loading and model training to evaluation, webcam-based inference, and the GUI demo. A reviewer can use the code to clearly follow how the two models were built, how predictions are produced, and how the final real-time application works.
 
-- identify the purpose of each script
-- understand which model is used where
-- train the models
-- run the GUI
-- run the standalone real-time demos
-- verify outputs such as saved models and classification reports
+## Potential Applications
 
-## License / Academic Use
-
-This repository was prepared as a course project. If you share or reuse it, make sure the RAF-DB dataset is used according to its original license and access conditions.
+Although this project was developed as an academic prototype, similar emotion recognition systems can be explored in areas where understanding visible emotional reactions is important. For example, this kind of pipeline may be useful in observational or assistive settings to help better understand children's emotional and psychological state through facial expressions during interaction or learning activities. It should be seen as a supportive analysis tool rather than a clinical diagnosis system.
